@@ -1,4 +1,6 @@
-// Baseado no livro 'Introdução a C' de Mauricio Ariche 
+// Baseado no livro 'Introdução à programação em C: 
+// Os primeiros passos de um desenvolvedor' de Maurício Aniche 
+
 #include <stdio.h> 
 //é por convenção, que usamos letras maiusculas e underscore para nomear constantes em C
 #define NUMERO_DE_TENTATIVAS 3
