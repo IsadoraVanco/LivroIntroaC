@@ -71,21 +71,21 @@ int main(){
 
     if(acertou) {
         printf("\n");
-        printf("              OOOOOOOOOOO \n");
-        printf("          OOOOOOOOOOOOOOOOOOO \n");
-        printf("       OOOOOO  OOOOOOOOO  OOOOOO \n");
-        printf("     OOOOOO      OOOOO      OOOOOO \n");
-        printf("   OOOOOOOO   #  OOOOO   #  OOOOOOOO \n");
-        printf("  OOOOOOOOOO    OOOOOOO    OOOOOOOOOO \n");
+        printf("              OOOOOOOOOOO              \n");
+        printf("          OOOOOOOOOOOOOOOOOOO          \n");
+        printf("       OOOOOO  OOOOOOOOO  OOOOOO       \n");
+        printf("     OOOOOO      OOOOO      OOOOOO     \n");
+        printf("   OOOOOOOO   #  OOOOO   #  OOOOOOOO   \n");
+        printf("  OOOOOOOOOO    OOOOOOO    OOOOOOOOOO  \n");
         printf(" OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO \n");
         printf(" OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO \n");
         printf(" OOOO  OOOOOOOOOOOOOOOOOOOOOOOOO  OOOO \n");
-        printf("  OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO \n");
-        printf("   OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO \n");
-        printf("     OOOOO   OOOOOOOOOOOOOOO   OOOO \n");
-        printf("       OOOOOO   OOOOOOOOO   OOOOOO \n");
-        printf("          OOOOOO         OOOOOO \n");
-        printf("              OOOOOOOOOOOO \n");
+        printf("  OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO  \n");
+        printf("   OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO   \n");
+        printf("     OOOOO   OOOOOOOOOOOOOOO   OOOO    \n");
+        printf("       OOOOOO   OOOOOOOOO   OOOOOO     \n");
+        printf("          OOOOOO         OOOOOO        \n");
+        printf("              OOOOOOOOOOOO             \n");
 
         printf("\nParabens! Voce acertou!\n");
         printf("Voce fez %.2lf pontos. Ate a proxima!\n", pontos);
