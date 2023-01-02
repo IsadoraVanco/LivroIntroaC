@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include "cp13.h"
+#include "forca.h"
 
 char palavraSecreta[TAMANHO_PALAVRA]; 
 char chutes[27]; 
@@ -193,7 +193,7 @@ void adicionaPalavra(){
         scanf("%s", novaPalavra);
 
         FILE* f;
-        f = fopen("cp13.txt", "r+"); 
+        f = fopen("palavras.txt", "r+"); 
 
         if(f == 0){
             printf("Banco de dados de palavras nao disponivel.\n");
