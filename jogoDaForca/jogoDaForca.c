@@ -59,8 +59,6 @@ int main(int argc, char const *argv[]){
     }
 
     adicionaPalavra();
-
-    // printf("\n FIM DE JOGO\n");
     
     return 0;
 }
@@ -113,7 +111,6 @@ void desenhaForca(){
 
     printf("  _______      \n");
     printf(" |/      |     \n");
-    //usando ifs ternários (condição ? verdadeiro : falso)
     printf(" |      %c%c%c    \n", (erros >= 1 ? '(' : ' '), (erros >= 1 ? '_' : ' '), (erros >= 1 ? ')' : ' '));
     printf(" |      %c%c%c    \n", (erros >= 2 ? '\\' : ' '), (erros >= 2 ? '|' : ' '), (erros >= 2 ? '/' : ' '));
     printf(" |       %c     \n", (erros >= 3 ? '|' : ' '));
@@ -136,7 +133,7 @@ void desenhaForca(){
 
 void escolhePalavra(){
     FILE* f;
-    f = fopen("cp12.txt", "r");
+    f = fopen("palavras.txt", "r");
 
     if(f == 0){
         printf("Banco de dados de palavras nao disponivel.\n");
