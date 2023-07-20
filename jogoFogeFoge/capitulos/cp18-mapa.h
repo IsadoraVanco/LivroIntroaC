@@ -1,9 +1,11 @@
 // Baseado no livro 'Introdução à programação em C: 
 // Os primeiros passos de um desenvolvedor' de Maurício Aniche 
 
-//tudo que é relacionado a mapa. 
-//podemos reutilizar e debugar mais facilmente
-//além de ficar mais organizado
+#define HEROI '@'
+#define VAZIO '.'
+#define PAREDE_VERTICAL '|'
+#define PAREDE_HORIZONTAL '-'
+
 struct mapa {
     char** matriz;
     int linhas;

@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "cp17.h"
-#include "cp17-mapa.h"
+#include "cp18.h"
+#include "cp18-mapa.h"
 
 //para que a variável global também seja lida em outros módulos,
 //é necessário utilizar a palavra chave 'extern' antes do tipo
@@ -18,40 +18,41 @@ int acabou(){
     return 0;
 }
 
+int ehDirecao(char direcao){
+    return
+        direcao == CIMA ||
+        direcao == BAIXO ||
+        direcao == ESQUERDA ||
+        direcao == DIREITA;
+}
+
 void move(char direcao){
 
-    if(
-        direcao != 'a' &&
-        direcao != 'w' &&
-        direcao != 's' &&
-        direcao != 'd' 
-    ) return;
+    if(!ehDirecao(direcao)) return;
 
     int proximoX = heroi.x;
     int proximoY = heroi.y;
 
     switch(direcao){
-        case 'a':
+        case ESQUERDA:
             proximoY--;
             break;
-        case 'w':
+        case CIMA:
             proximoX--;
             break;
-        case 's':
+        case BAIXO:
             proximoX++;
             break;
-        case 'd':
+        case DIREITA:
             proximoY++;
             break;    
     }
 
-    if(proximoX >= m.linhas) return;
-    if(proximoY >= m.colunas) return;
+    if(!ehValida(&m, proximoX, proximoY)) return;
+    if(!ehVazia(&m, proximoX, proximoY)) return;
     
-    if(m.matriz[proximoX][proximoY] != '.') return;
+    andaNoMapa(&m, heroi.x, heroi.y, proximoX, proximoY);
 
-    m.matriz[proximoX][proximoY] = '@';
-    m.matriz[heroi.x][heroi.y] = '.';
     heroi.x = proximoX;
     heroi.y = proximoY;
 }

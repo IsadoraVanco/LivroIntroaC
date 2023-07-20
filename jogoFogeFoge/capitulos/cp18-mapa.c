@@ -3,12 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "cp17-mapa.h"
+#include "cp18-mapa.h"
 
 void leMapa(MAPA* m){
     FILE *file;
 
-    file = fopen("cp17.txt", "r");
+    file = fopen("cp18.txt", "r");
     if(file == 0){
         printf("Erro na leitura do mapa.");
         exit(1);
@@ -55,4 +55,22 @@ void encontraMapa(MAPA *m, POSICAO *p, char c){
             }
         }
     }
+}
+
+int ehValida(MAPA *m, int x, int y){
+    if(x >= m->linhas) return 0;
+    if(y >= m->colunas) return 0;
+
+    return 1;
+}
+
+int ehVazia(MAPA *m, int x, int y){
+    return m->matriz[x][y] == VAZIO;
+}
+
+void andaNoMapa(MAPA *m, int xOrigem, int yOrigem, int xDestino, int yDestino){
+    char personagem = m->matriz[xOrigem][yOrigem];
+    
+    m->matriz[xDestino][yDestino] = personagem;
+    m->matriz[xOrigem][yOrigem] = VAZIO;
 }
