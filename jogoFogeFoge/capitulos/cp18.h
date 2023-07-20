@@ -8,6 +8,8 @@
 
 #define FANTASMA 'F'
 
+void fantasmas();
+int paraOndeFantasmaVai(int xAtual, int yAtual, int *xDestino, int *yDestino);
 int acabou();
 int ehDirecao(char direcao);
 void move(char direcao);
