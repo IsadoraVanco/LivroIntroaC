@@ -9,18 +9,6 @@ char **mapa;
 // char mapa[5][11]; //com 1 posição a mais nas linhas para o \n
 int linhas, colunas;
 
-int main(int argc, char const *argv[]){
-
-    leMapa();
-
-    for(int i = 0; i < linhas; i++){
-        printf("%s\n", mapa[i]);
-    }
-
-    liberaMapa();
-
-    return 0;
-}
 
 void leMapa(){
     FILE *file;
@@ -54,4 +42,17 @@ void liberaMapa(){
         free(mapa[i]);
     }
     free(mapa);
+}
+
+int main(int argc, char const *argv[]){
+
+    leMapa();
+
+    for(int i = 0; i < linhas; i++){
+        printf("%s\n", mapa[i]);
+    }
+
+    liberaMapa();
+
+    return 0;
 }
