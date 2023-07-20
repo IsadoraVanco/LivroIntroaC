@@ -14,6 +14,24 @@ POSICAO heroi;
 
 int x, y;
 
+void fantasmas(){
+    MAPA copia;
+
+    copiaMapa(&copia, &m);
+
+    for(int i = 0; i < copia.linhas; i++){
+        for(int j = 0; j < copia.colunas; j++){
+            if(copia.matriz[i][j] == FANTASMA){
+                if(podeAndar(&m, i, j + 1)){
+                    andaNoMapa(&m, i, j, i, j + 1);
+                }
+            }
+        }
+    }
+
+    liberaMapa(&copia);
+}
+
 int acabou(){
     return 0;
 }
@@ -69,6 +87,7 @@ int main(int argc, char const *argv[]){
         scanf("%c", &comando);
         
         move(comando);
+        fantasmas();
     } while(!acabou());
 
     liberaMapa(&m);

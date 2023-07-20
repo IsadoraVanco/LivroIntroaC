@@ -6,6 +6,8 @@
 #define ESQUERDA 'a'
 #define DIREITA 'd'
 
+#define FANTASMA 'F'
+
 int acabou();
 int ehDirecao(char direcao);
 void move(char direcao);
