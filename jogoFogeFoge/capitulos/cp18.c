@@ -51,7 +51,7 @@ int paraOndeFantasmaVai(int xAtual, int yAtual, int *xDestino, int *yDestino){
     for(int i = 0; i < 10; i++){
         int posicao = rand() % 4;
 
-        if(podeAndar(&m, opcoes[posicao][0], opcoes[posicao][1])){
+        if(podeAndar(&m, FANTASMA, opcoes[posicao][0], opcoes[posicao][1])){
             *xDestino = opcoes[posicao][0];
             *yDestino = opcoes[posicao][1];
             return 1;
@@ -62,7 +62,12 @@ int paraOndeFantasmaVai(int xAtual, int yAtual, int *xDestino, int *yDestino){
 }
 
 int acabou(){
-    return 0;
+    POSICAO pos;
+
+    int perdeu = !encontraMapa(&m, &pos, HEROI);
+    int ganhou = !encontraMapa(&m, &pos, FANTASMA);
+
+    return perdeu || ganhou;
 }
 
 int ehDirecao(char direcao){
@@ -95,8 +100,7 @@ void move(char direcao){
             break;    
     }
 
-    if(!ehValida(&m, proximoX, proximoY)) return;
-    if(!ehVazia(&m, proximoX, proximoY)) return;
+    if(!podeAndar(&m, HEROI, proximoX, proximoY)) return;
     
     andaNoMapa(&m, heroi.x, heroi.y, proximoX, proximoY);
 
@@ -107,13 +111,13 @@ void move(char direcao){
 int main(int argc, char const *argv[]){
 
     leMapa(&m);
-    encontraMapa(&m, &heroi, '@');
+    encontraMapa(&m, &heroi, HEROI);
 
     do{
         imprimeMapa(&m);
 
         char comando;
-        scanf("%c", &comando);
+        scanf(" %c", &comando);
         
         move(comando);
         fantasmas();
