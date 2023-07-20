@@ -19,28 +19,41 @@ int acabou(){
 }
 
 void move(char direcao){
-    //os fors foram substituidos por variaveis globais que indicam a posição
 
-    m.matriz[heroi.x][heroi.y] = '.';
+    if(
+        direcao != 'a' &&
+        direcao != 'w' &&
+        direcao != 's' &&
+        direcao != 'd' 
+    ) return;
+
+    int proximoX = heroi.x;
+    int proximoY = heroi.y;
 
     switch(direcao){
         case 'a':
-            m.matriz[heroi.x][heroi.y - 1] = '@';
-            heroi.y--;
+            proximoY--;
             break;
         case 'w':
-            m.matriz[heroi.x - 1][heroi.y] = '@';
-            heroi.x--;
+            proximoX--;
             break;
         case 's':
-            m.matriz[heroi.x + 1][heroi.y] = '@';
-            heroi.x++;
+            proximoX++;
             break;
         case 'd':
-            m.matriz[heroi.x][heroi.y + 1] = '@';
-            heroi.y++;
+            proximoY++;
             break;    
     }
+
+    if(proximoX >= m.linhas) return;
+    if(proximoY >= m.colunas) return;
+    
+    if(m.matriz[proximoX][proximoY] != '.') return;
+
+    m.matriz[proximoX][proximoY] = '@';
+    m.matriz[heroi.x][heroi.y] = '.';
+    heroi.x = proximoX;
+    heroi.y = proximoY;
 }
 
 int main(int argc, char const *argv[]){
