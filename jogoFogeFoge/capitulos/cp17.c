@@ -9,48 +9,40 @@
 //para que a variável global também seja lida em outros módulos,
 //é necessário utilizar a palavra chave 'extern' antes do tipo
 MAPA m; 
+//representa as coordenadas do jogador no mapa
+POSICAO heroi;
 
-// char **mapa;
-// int linhas, colunas;
+int x, y;
 
 int acabou(){
     return 0;
 }
 
 void move(char direcao){
-    int x, y;
+    //os fors foram substituidos por variaveis globais que indicam a posição
 
-    for(int i = 0; i < m.linhas; i++){
-        for(int j = 0; j < m.colunas; j++){
-            if(m.matriz[i][j] == '@'){
-                x = i;
-                y = j;
-                break;
-            }
-        }
-    }
+    m.matriz[heroi.x][heroi.y] = '.';
 
     switch(direcao){
         case 'a':
-            m.matriz[x][y - 1] = '@';
+            m.matriz[heroi.x][heroi.y - 1] = '@';
             break;
         case 'w':
-            m.matriz[x - 1][y] = '@';
+            m.matriz[heroi.x - 1][heroi.y] = '@';
             break;
         case 's':
-            m.matriz[x + 1][y] = '@';
+            m.matriz[heroi.x + 1][heroi.y] = '@';
             break;
         case 'd':
-            m.matriz[x][y + 1] = '@';
+            m.matriz[heroi.x][heroi.y + 1] = '@';
             break;    
     }
-
-    m.matriz[x][y] = '.';
 }
 
 int main(int argc, char const *argv[]){
 
     leMapa(&m);
+    encontraMapa(&m, &heroi, '@');
 
     do{
         imprimeMapa(&m);

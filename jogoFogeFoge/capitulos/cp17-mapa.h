@@ -13,7 +13,16 @@ struct mapa {
 //um "apelido" para a estrutura mapa
 typedef struct mapa MAPA;
 
+//representam a posição do jogador no mapa
+struct posicao {
+    int x;
+    int y;
+};
+
+typedef struct posicao POSICAO;
+
 void leMapa(MAPA* m);
 void alocaMapa(MAPA* m);
 void liberaMapa(MAPA* m);
 void imprimeMapa(MAPA* m);
+void encontraMapa(MAPA *m, POSICAO *p, char c);
