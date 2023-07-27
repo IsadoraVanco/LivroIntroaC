@@ -1,0 +1,21 @@
+O que fazer agora?
+
+* Orientação a Objetos (OO) e linguagens orientadas a objetos
+    -Por exemplo, Java e C#
+    -O que é OO?
+    -Polimorfismo
+    -Herança
+    -Encapsulamento
+
+*Desenvolvimento Web
+    -HTML, CSS e JavaScript
+    -Frameworks para desenvolvimento do servidor
+
+*Desenvolvimento Mobile
+    -Java e Objective-C/Swift
+
+*Testes automatizados de código
+
+*Boas práticas de código
+    -Estudar OO
+    -Padrões de arquitetura de Software
