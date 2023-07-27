@@ -110,15 +110,34 @@ void move(char direcao){
     heroi.y = proximoY;
 }
 
+void explodeBomba2(int x, int y, int somaX, int somaY, int qtd){
+
+    //irá parar quando a quantidade chegar a 0
+    //pontos de fuga
+    if(qtd == 0) return;
+
+    int novoX = x + somaX;
+    int novoY = y + somaY;
+
+    if(!ehValida(&m, novoX, novoY)) return;
+    if(ehParede(&m, novoX, novoY)) return;
+
+    m.matriz[novoX][novoY] = VAZIO;
+
+    //uma função recursiva
+    explodeBomba2(novoX, novoY, somaX, somaY, qtd - 1);
+}
+
 void explodeBomba(){
 
-    for(int i = 1; i <= 3; i++){
-        if(ehValida(&m, heroi.x, heroi.y)){
-            if(ehParede(&m, heroi.x, heroi.y)) break;
+    if(!temPilula) return;
 
-            m.matriz[heroi.x][heroi.y] = VAZIO;
-        }
-    }
+    explodeBomba2(heroi.x, heroi.y, 0, 1, 3);
+    explodeBomba2(heroi.x, heroi.y, 0, -1, 3);
+    explodeBomba2(heroi.x, heroi.y, 1, 0, 3);
+    explodeBomba2(heroi.x, heroi.y, -1, 0, 3);
+
+    temPilula = 0;
 }
 
 int main(int argc, char const *argv[]){
