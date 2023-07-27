@@ -4,12 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cp18-mapa.h"
+#include "cp19-mapa.h"
 
 void leMapa(MAPA* m){
     FILE *file;
 
-    file = fopen("cp18.txt", "r");
+    file = fopen("cp19.txt", "r");
     if(file == 0){
         printf("Erro na leitura do mapa.");
         exit(1);
