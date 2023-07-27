@@ -4,12 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cp20-mapa.h"
+#include "mapa.h"
 
 void leMapa(MAPA* m){
     FILE *file;
 
-    file = fopen("cp20.txt", "r");
+    file = fopen("mapa.txt", "r");
     if(file == 0){
         printf("Erro na leitura do mapa.");
         exit(1);

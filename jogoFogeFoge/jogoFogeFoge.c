@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "cp20.h"
-#include "cp20-mapa.h"
-#include "cp20-ui.h"
+#include "fogeFoge.h"
+#include "mapa.h"
+#include "ui.h"
 
 MAPA m; 
 POSICAO heroi;
