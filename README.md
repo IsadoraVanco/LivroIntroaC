@@ -3,7 +3,7 @@
 Aqui contém os códigos do livro **"Introdução à programação em C: Os primeiros passos de um desenvolvedor"** de Maurício Aniche. Em cada capítulo, há a abordagem de temas diferentes:
 
 ## Jogo da Adivinhação
-Estarão em [jogoAdivinhacao/capitulos/](https://github.com/isadoravanco/livroIntroaC/tree/main/jogoAdivinhacao/capitulos)
+Estarão em [jogoAdivinhacao/capitulos/](https://github.com/IsadoraVanco/LivroIntroaC/tree/main/jogoAdivinhacao/capitulos)
 
 * Capítulo 3: Variáveis
 * Capítulo 4: Estruturas de condição e repetição
@@ -11,7 +11,7 @@ Estarão em [jogoAdivinhacao/capitulos/](https://github.com/isadoravanco/livroIn
 * Capítulo 6: Switch Case 
 
 ## Jogo da Forca
-Estarão em [jogoDaForca/capitulos/](https://github.com/isadoravanco/livroIntroaC/tree/main/jogoDaForca/capitulos)
+Estarão em [jogoDaForca/capitulos/](https://github.com/IsadoraVanco/LivroIntroaC/tree/main/jogoDaForca/capitulos)
 
 * Capítulo 9: Arrays
 * Capítulo 10: Bits, Binário, Hexadecimal
@@ -19,7 +19,7 @@ Estarão em [jogoDaForca/capitulos/](https://github.com/isadoravanco/livroIntroa
 * Capítulo 12: Entrada e Saída
 
 ## Jogo Foge-Foge
-Estarão em [jogoFogeFoge/capitulos/](https://github.com/isadoravanco/livroIntroaC/tree/main/jogoFogeFoge/capitulos)
+Estarão em [jogoFogeFoge/capitulos/](https://github.com/IsadoraVanco/LivroIntroaC/tree/main/jogoFogeFoge/capitulos)
 
 * Capítulo 16: Matrizes
 * Capítulo 17: Structs
